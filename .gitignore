@@ -1,63 +1,41 @@
-# ========================================
-# Node / React / Vite
-# ========================================
-venv/
-node_modules/
-dist/
-build/
-coverage/
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Logs
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-vite.config.timestamp-*
+.pnpm-debug.log*
 
-# Cache
-.cache/
-.vite/
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
 *.tsbuildinfo
-
-# IDEs / Sistemas
-.vscode/
-.idea/
-*.swp
-.DS_Store
-Thumbs.db
-
-# Arquivos temporários do sistema
-*.log
-*.tmp
-*.bak
-
-# Testes e relatórios
-coverage/
-jest-cache/
-jest-resolve-cache/
-test-results/
-
-# ========================================
-# Python / FastAPI (caso venha integrar depois)
-# ========================================
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.sqlite3
-instance/
-.env
-.venv/
-venv/
-.env.*
-*.db
-
-# ========================================
-# Git / Outros
-# ========================================
-.gitignore
+next-env.d.ts
