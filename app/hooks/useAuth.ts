@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { jwtDecode } from "jwt-decode";
-import api from "../api/api";
+import api from "../lib/api";
 
 export function useAuth() {
   const [user, setUser] = useState<any>(null);
