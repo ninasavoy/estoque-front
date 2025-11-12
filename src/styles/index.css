@@ -1,0 +1,36 @@
+/* src/styles/index.css */
+
+/* importa tokens e componentes */
+@import "./variables.css";
+@import "./components.css";
+
+
+html, body, #root { height: 100%; margin: 0; }
+body {
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.4;
+}
+/* reset / base leve */
+* { 
+    box-sizing: border-box; 
+    font-family: inherit;
+}
+
+/* container util */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* headings */
+h1, h2, h3, h4 { margin: 0 0 12px 0; font-weight: 700; }
+
+/* responsividade básica */
+@media (max-width: 768px) {
+  .container { padding: 12px; }
+}
