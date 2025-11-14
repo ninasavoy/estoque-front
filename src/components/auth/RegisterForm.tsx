@@ -43,22 +43,22 @@ export default function RegisterForm({ onSubmit, initial }: Props) {
   return (
     <form onSubmit={handleSubmit} aria-label="register-form">
       <div style={{ display: "grid", gap: 8 }}>
-        <label>
+        <label style={{ color: "white", display: "flex", flexDirection: "column" }}>
           Nome
-          <input value={nome} onChange={(e) => setNome(e.target.value)} required style={{ padding: 8, marginTop: 6 }} />
+          <input value={nome} onChange={(e) => setNome(e.target.value)} required style={{ padding: 8, marginTop: 6, borderRadius: 10 }} />
         </label>
 
-        <label>
+        <label style={{ color: "white", display: "flex", flexDirection: "column" }}>
           Email
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required style={{ padding: 8, marginTop: 6 }} />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required style={{ padding: 8, marginTop: 6, borderRadius: 10 }} />
         </label>
 
-        <label>
+        <label style={{ color: "white", display: "flex", flexDirection: "column" }}>
           Senha
-          <input type="password" value={senha} onChange={(e) => setSenha(e.target.value)} required style={{ padding: 8, marginTop: 6 }} />
+          <input type="password" value={senha} onChange={(e) => setSenha(e.target.value)} required style={{ padding: 8, marginTop: 6, borderRadius: 10 }} />
         </label>
 
-        <label>
+        <label style={{ color: "white", display: "flex", flexDirection: "column" }}>
           Tipo de conta
           <select value={tipo} onChange={(e) => setTipo(e.target.value)} style={{ padding: 8, marginTop: 6 }}>
             <option value="farmaceutica">Farmacêutica</option>

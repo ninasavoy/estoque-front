@@ -39,25 +39,25 @@ export default function LoginForm({ onSubmit, initial }: Props) {
   return (
     <form onSubmit={handleSubmit} aria-label="login-form">
       <div style={{ display: "grid", gap: 8 }}>
-        <label>
+        <label style={{ color: "white" }}>
           Email
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            style={{ width: "100%", padding: 8, marginTop: 6 }}
+            style={{ width: "100%", padding: 8, marginTop: 6, borderRadius: 10 }}
           />
         </label>
 
-        <label>
+        <label style={{ color: "white" }}>
           Senha
           <input
             type="password"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
             required
-            style={{ width: "100%", padding: 8, marginTop: 6 }}
+            style={{ width: "100%", padding: 8, marginTop: 6, borderRadius: 10 }}
           />
         </label>
 

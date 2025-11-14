@@ -21,14 +21,32 @@ export default function RegisterPage() {
 
   return (
     <div style={{ display: "grid", placeItems: "center", minHeight: "100vh", padding: 20 }}>
-      <div style={{ width: 520, maxWidth: "95%" }} className="card">
-        <h2>Registrar nova conta</h2>
-        <p className="text-muted">Crie uma conta para começar a usar a plataforma.</p>
+      <div style={{ width: 520, maxWidth: "95%", backgroundColor: "#3b3b3b" }} className="card">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: 20,
+          }}
+        >
+          <img
+            src="/logo.png"
+            alt="Logo TCS"
+            style={{
+              width: 160,
+              height: "auto",
+              objectFit: "contain",
+              filter: "brightness(0) invert(1)", // mantém o logo branco visível
+            }}
+          />
+        </div>
+        <h2 style={{ color: "white" }}>Registrar nova conta</h2>
+        <p className="text-muted" style={{ color: "#a9a9a9" }}>Crie uma conta para começar a usar a plataforma.</p>
 
         <RegisterForm onSubmit={handleRegister} />
 
-        <div style={{ marginTop: 12 }} className="text-muted">
-          Já tem conta? <a href="/login">Entrar</a>
+        <div style={{ marginTop: 12, color: "#a9a9a9" }} className="text-muted" >
+          Já tem conta? <a href="/login" style={{ color: "white" }}>Entrar</a>
         </div>
       </div>
     </div>

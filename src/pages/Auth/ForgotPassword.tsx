@@ -23,13 +23,31 @@ export default function ForgotPassword() {
 
   return (
     <div style={{ display: "grid", placeItems: "center", minHeight: "100vh", padding: 20 }}>
-      <div className="card" style={{ width: 480, maxWidth: "95%" }}>
-        <h2>Recuperar senha</h2>
+      <div className="card" style={{ width: 480, maxWidth: "95%", backgroundColor: "#3b3b3b" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: 20,
+          }}
+        >
+          <img
+            src="/logo.png"
+            alt="Logo TCS"
+            style={{
+              width: 160,
+              height: "auto",
+              objectFit: "contain",
+              filter: "brightness(0) invert(1)", // mantém o logo branco visível
+            }}
+          />
+        </div>
+        <h2 style={{ color: "white" }}>Recuperar senha</h2>
         {!sent ? (
           <>
-            <p className="text-muted">Informe o e-mail cadastrado para receber instruções de recuperação.</p>
+            <p className="text-muted" style={{ color: "#a9a9a9" }}>Informe o e-mail cadastrado para receber instruções de recuperação.</p>
             <form onSubmit={handleSubmit}>
-              <label className="text-muted">E-mail</label>
+              <label className="text-muted" style={{ color: "white" }}>E-mail</label>
               <input
                 className="input"
                 value={email}
@@ -38,10 +56,10 @@ export default function ForgotPassword() {
                 required
               />
               <div style={{ marginTop: 12, display: "flex", justifyContent: "flex-end", gap: 8 }}>
-                <button className="btn btn-ghost" type="button" onClick={() => (window.location.href = "/login")}>
+                <button className="btn btn-ghost" style={{ color: "white" }} type="button" onClick={() => (window.location.href = "/login")}>
                   Voltar
                 </button>
-                <button className="btn btn-primary" disabled={loading}>
+                <button className="btn btn-primary" style={{ color: "white" }} disabled={loading}>
                   {loading ? "Enviando..." : "Enviar instruções"}
                 </button>
               </div>
